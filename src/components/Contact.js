@@ -26,7 +26,7 @@ function Contact() {
         {/* Social Media Links */}
         <div className="social-links">
           <a href="https://www.linkedin.com/in/sharonodima" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/linkedin.jpeg" alt="LinkedIn" className="social-icon"/>
+            <img src="/public/assets/linkedin.jpeg" alt="LinkedIn" className="social-icon"/>
           </a>
           <a href="https://github.com/sharonodima" target="_blank" rel="noopener noreferrer">
             <img src="/assets/github.png" alt="GitHub" className="social-icon" />

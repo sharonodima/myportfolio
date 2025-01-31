@@ -10,7 +10,7 @@ function About() {
         {/* First Container: Image + First Paragraph */}
         <div className="about-section">
           <img 
-            src="/assets/Portrait.JPG"
+            src="\public\assets\Portrait.JPG"
             alt="Portrait" 
             className="about-photo"
           />
