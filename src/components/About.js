@@ -1,5 +1,6 @@
 import React from 'react';
-import './Theme.css';
+import portrait from '../Portrait.JPG'
+import graduation from '../Graduation.jpg';
 
 function About() {
   return (
@@ -10,7 +11,7 @@ function About() {
         {/* First Container: Image + First Paragraph */}
         <div className="about-section">
           <img 
-            src="\public\assets\Portrait.JPG"
+            src={portrait}
             alt="Portrait" 
             className="about-photo"
           />
@@ -31,7 +32,7 @@ function About() {
         {/* Second Container: Image + Second Paragraph */}
         <div className="about-section">
           <img 
-            src="/Graduation.jpg" 
+            src={graduation} 
             alt="Another Portrait" 
             className="about-photo"
           />
