@@ -10,7 +10,7 @@ function About() {
         {/* First Container: Image + First Paragraph */}
         <div className="about-section">
           <img 
-            src="/assets/Portrait.JPG" 
+            src="/assets/Portrait.JPG"
             alt="Portrait" 
             className="about-photo"
           />
@@ -31,7 +31,7 @@ function About() {
         {/* Second Container: Image + Second Paragraph */}
         <div className="about-section">
           <img 
-            src="/assets/Graduation.jpg" 
+            src="/Graduation.jpg" 
             alt="Another Portrait" 
             className="about-photo"
           />

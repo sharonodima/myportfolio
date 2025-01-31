@@ -20,7 +20,7 @@ function Header() {
       <div className="orbit-container">
         {/* Central Image */}
         <img
-          src="/assets/Passport.jpeg"
+          src="public/assets/Portrait.JPG"
           alt="Portrait"
           className="portrait-photo center-image"
         />
