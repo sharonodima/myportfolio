@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import passport from '../Passport.jpeg'
 import './Theme.css';
 
 function Header() {
   const [typedIndex, setTypedIndex] = useState(0);
-  const fullText = "MY NAME IS SHARON ODIMA AND I'M A SOFTWARE ENGINEER";
+  const fullText = "MY NAME IS SHARON ODIMA \n AND I'M A SOFTWARE ENGINEER";
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -20,7 +21,7 @@ function Header() {
       <div className="orbit-container">
         {/* Central Image */}
         <img
-          src="public/assets/Portrait.JPG"
+          src={passport}
           alt="Portrait"
           className="portrait-photo center-image"
         />

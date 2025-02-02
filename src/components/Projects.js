@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
+import project2 from "../Project2.jpeg"
+import project3 from "../Project3.jpeg"
 import './Theme.css';
 
 function Projects() {
@@ -14,33 +16,6 @@ function Projects() {
         {/* Project 1 */}
         <div className="project-box">
           <h3 className="gradient-text">Project 1</h3>
-          <h3 className="gradient-text">User Interface</h3>
-          <a
-            href="https://sharonodima.github.io/User-Interface-II/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/UserInterface.jpeg"
-              alt="Project 1 Photo"
-              className="project-photo reduced-size"
-            />
-          </a>
-          <p>
-            Developed a responsive website that implemented a CSS reset, box
-            model, and flexbox module. Launched a plan to design a wireframe to
-            create About, Project, and Contact pages, resulting in a robust
-            application incorporating 10+ features. I then hosted the completed
-            website on GitHub, improving accessibility by 100% and maintaining
-            the website aesthetics.
-          </p>
-        </div>
-        <div className="extra-container">
-        </div>
-
-        {/* Project 2 */}
-        <div className="project-box">
-          <h3 className="gradient-text">Project 2</h3>
           <h3 className="gradient-text">Responsive Design</h3>
           <a
             href="https://sharonodima.github.io/HTML-CSS-Responsive-Practice/"
@@ -48,8 +23,8 @@ function Projects() {
             rel="noopener noreferrer"
           >
            <img
-              src="/assets/Project2.jpeg"
-              alt="Project 2 Photo"
+              src={project2}
+              alt="Project 1 Photo"
               className="project-photo reduced-size"
            />
 
@@ -65,9 +40,9 @@ function Projects() {
         </div>
 
 
-        {/* Project 3 */}
+        {/* Project 2 */}
         <div className="project-box">
-          <h3 className="gradient-text">Project 3</h3>
+          <h3 className="gradient-text">Project 2</h3>
           <h3 className="gradient-text">JSON Web Tokens</h3>
           <a
             href="https://sharon-odima-react-website.vercel.app/"
@@ -75,8 +50,8 @@ function Projects() {
             rel="noopener noreferrer"
           >
              <img
-              src="/assets/Project3.jpeg"
-              alt=""
+              src={project3}
+              alt="Project 2 Photo"
               className="project-photo reduced-size"
             />
           </a>

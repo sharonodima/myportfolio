@@ -1,6 +1,7 @@
 import React from 'react';
 import portrait from '../Portrait.JPG'
 import graduation from '../Graduation.jpg';
+import "./Theme.css"
 
 function About() {
   return (

@@ -1,5 +1,8 @@
 import React from 'react';
-import '/Theme.css';
+import linkedin from '../linkedin.jpeg';
+import github from '../github.png';
+import website from '../website.png';
+import './Theme.css';
 
 function Contact() {
   return (
@@ -26,13 +29,13 @@ function Contact() {
         {/* Social Media Links */}
         <div className="social-links">
           <a href="https://www.linkedin.com/in/sharonodima" target="_blank" rel="noopener noreferrer">
-            <img src="/public/assets/linkedin.jpeg" alt="LinkedIn" className="social-icon"/>
+            <img src={linkedin} alt="LinkedIn" className="social-icon"/>
           </a>
           <a href="https://github.com/sharonodima" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/github.png" alt="GitHub" className="social-icon" />
+            <img src={github} alt="GitHub" className="social-icon" />
           </a>
           <a href="https://sharon-odima-react-website.vercel.app/" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/website.png" alt="Website" className="social-icon" />
+            <img src={website} alt="Website" className="social-icon" />
           </a>
         </div>
 
