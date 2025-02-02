@@ -34,7 +34,7 @@ function Contact() {
           <a href="https://github.com/sharonodima" target="_blank" rel="noopener noreferrer">
             <img src={github} alt="GitHub" className="social-icon" />
           </a>
-          <a href="https://sharon-odima-react-website.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a href=" https://sharonodima.github.io/myportfolio/" target="_blank" rel="noopener noreferrer">
             <img src={website} alt="Website" className="social-icon" />
           </a>
         </div>
