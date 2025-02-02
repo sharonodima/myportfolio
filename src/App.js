@@ -6,22 +6,19 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Header from './components/Header'; // Shared Header component
-import FloatingPics from './components/FloatingPics'; // New FloatingPics component
+import Header from './components/Header';
+import FloatingPics from './components/FloatingPics';
 import "./Theme.css";
 
 function App() {
   return React.createElement(
     Router,
-    null,
+    { basename: "/myportfolio" }, // Add basename for GitHub Pages
     React.createElement(
       'div',
       null,
-      // Global header
       React.createElement(Header, null),
-      // Navigation bar
       React.createElement(Navbar, null),
-      // Define routes for the app
       React.createElement(
         Routes,
         null,
@@ -30,7 +27,6 @@ function App() {
         React.createElement(Route, { path: '/projects', element: React.createElement(Projects, null) }),
         React.createElement(Route, { path: '/contact', element: React.createElement(Contact, null) })
       ),
-      // Floating pictures that appear on every page
       React.createElement(FloatingPics, null)
     )
   );
