@@ -477,3 +477,9 @@ h1, h2, h3 {
   to   { transform: translate(10vw, -10vh); }
 }
 
+@media (max-width: 768px) {
+  .floating-pics-container {
+    display: none;
+  }
+}
+
