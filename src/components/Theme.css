@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  position: relative;
+  color: #e0e0e0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./MountKenya.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+/* Global Header */
+.global-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; /* Prevents overflow */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Typewriter text styles */
+.typewriter {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: gold;
+  white-space: pre-wrap; /* Allows text to wrap properly */
+  word-break: break-word; /* Ensures long words break */
+  max-width: 90%; /* Ensures text stays within the screen */
+  margin: 50px auto; /* Adjusted for better positioning */
+  text-align: center;
+}
+
+/* Profile image styling */
+.portrait-photo {
+  width: 150px; /* Default size for desktop */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Ensure portrait stays centered and doesn't overflow */
+.orbit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Floating Pictures Section */
+.floating-pics-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 1.5rem; /* Reduce text size on mobile */
+    max-width: 80%;
+  }
+
+  .portrait-photo {
+    width: 100px; /* Reduce image size */
+    height: 100px;
+  }
+
+  .global-header {
+    padding: 10px; /* Reduce padding to fit content better */
+  }
+
+  /* Hide FloatingPics on mobile */
+  .floating-pics-container {
+    display: none;
+  }
+}
+

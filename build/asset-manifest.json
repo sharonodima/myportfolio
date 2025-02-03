@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/myportfolio/static/css/main.234db5c7.css",
+    "main.js": "/myportfolio/static/js/main.a4c1f431.js",
+    "static/js/488.f30ea4ab.chunk.js": "/myportfolio/static/js/488.f30ea4ab.chunk.js",
+    "static/media/MountKenya.jpeg": "/myportfolio/static/media/MountKenya.f84e1055f84c28bfe2c1.jpeg",
+    "static/media/Portrait.JPG": "/myportfolio/static/media/Portrait.47f0b23f7e7a12fcce33.JPG",
+    "static/media/Graduation.jpg": "/myportfolio/static/media/Graduation.5d4f57eb8b32184490ee.jpg",
+    "static/media/Project2.jpeg": "/myportfolio/static/media/Project2.45989367511eb3c9c19c.jpeg",
+    "static/media/Project3.jpeg": "/myportfolio/static/media/Project3.99577cd6f15e1ed94153.jpeg",
+    "static/media/linkedin.jpeg": "/myportfolio/static/media/linkedin.47ae06326ecc3136472b.jpeg",
+    "static/media/Node.png": "/myportfolio/static/media/Node.9e2dd42d42264eeec350.png",
+    "static/media/ReactPic.png": "/myportfolio/static/media/ReactPic.0c271244bb69f8b23ccf.png",
+    "static/media/css.png": "/myportfolio/static/media/css.7fbd63ce6770f438465d.png",
+    "static/media/Passport.jpeg": "/myportfolio/static/media/Passport.6202b492d27133758472.jpeg",
+    "static/media/Javascript.png": "/myportfolio/static/media/Javascript.4f458a83c2683e7195d4.png",
+    "static/media/website.png": "/myportfolio/static/media/website.bf727e1abaadc15ba13a.png",
+    "static/media/github.png": "/myportfolio/static/media/github.52b5af2e54f2bc6f5722.png",
+    "index.html": "/myportfolio/index.html",
+    "main.234db5c7.css.map": "/myportfolio/static/css/main.234db5c7.css.map",
+    "main.a4c1f431.js.map": "/myportfolio/static/js/main.a4c1f431.js.map",
+    "488.f30ea4ab.chunk.js.map": "/myportfolio/static/js/488.f30ea4ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.234db5c7.css",
+    "static/js/main.a4c1f431.js"
+  ]
+}
