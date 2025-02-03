@@ -15,7 +15,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url(/public/assets/MountKenya.jpeg); */
+  background-image: url(../MountKenya.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -46,9 +46,9 @@ body::before {
 }
 
 .center-image {
-  border-radius: 50px;
+  border-radius: 80px;
   transition: all 1s;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   margin: 10px auto;
   display: block;
@@ -235,7 +235,7 @@ h1, h2, h3 {
   white-space: pre;
   overflow: hidden;
   width: fit-content;
-  margin: 100px auto 100px;
+  margin: 200px auto 100px;
   animation: blink-caret 0.6s step-end infinite;
 }
 
@@ -291,8 +291,12 @@ h1, h2, h3 {
 
 /* Global Header */
 .global-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  position: relative;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -413,3 +417,72 @@ h1, h2, h3 {
   background-color: #4682b4;
 }
 
+/* Floating Pictures Section */
+/* The container spans the full viewport and allows the pics to drift */
+/* Floating Pictures Container */
+.floating-pics-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow interactions with underlying content */
+  z-index: 50; /* Adjust as needed */
+}
+
+/* Each floating pic is absolutely positioned and animated */
+.floating-pic {
+  position: absolute;
+  width: 120px;  /* Adjust the size as needed */
+  height: auto;
+  cursor: pointer;
+  pointer-events: auto; /* Enable hover interactions */
+  animation: lazyDrift 30s ease-in-out infinite;
+}
+
+/* Distribute initial positions using nth-child selectors */
+.floating-pic:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+.floating-pic:nth-child(2) {
+  top: 20%;
+  left: 70%;
+}
+.floating-pic:nth-child(3) {
+  top: 40%;
+  left: 30%;
+}
+.floating-pic:nth-child(4) {
+  top: 60%;
+  left: 80%;
+}
+.floating-pic:nth-child(5) {
+  top: 80%;
+  left: 20%;
+}
+
+/* Lazy drifting: the images only shift within a bounded area */
+@keyframes lazyDrift {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(5vw, 5vh); }
+  50%  { transform: translate(-5vw, 5vh); }
+  75%  { transform: translate(-5vw, -5vh); }
+  100% { transform: translate(0, 0); }
+}
+
+/* On hover, the image accelerates to a new nearby position */
+.floating-pic:hover {
+  animation: fastRun 1s ease-out forwards;
+}
+
+@keyframes fastRun {
+  from { transform: none; }
+  to   { transform: translate(10vw, -10vh); }
+}
+
+@media (max-width: 768px) {
+  .floating-pics-container {
+    display: none;
+  }
+}
