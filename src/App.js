@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Welcome from './components/Welcome';
@@ -7,8 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import FloatingPics from './components/FloatingPics';
-import "./Theme.css";
+
 
 // Hook to detect screen width dynamically
 function useWindowSize() {
@@ -32,7 +30,7 @@ function App() {
 
   return React.createElement(
     Router,
-    { basename: "/myportfolio" }, // Add basename for GitHub Pages
+    { basename: process.env.PUBLIC_URL }, // Add basename for GitHub Pages
     React.createElement(
       'div',
       null,
@@ -46,9 +44,23 @@ function App() {
         React.createElement(Route, { path: '/projects', element: React.createElement(Projects, null) }),
         React.createElement(Route, { path: '/contact', element: React.createElement(Contact, null) })
       ),
-      isDesktop ? React.createElement(FloatingPics, null) : null // Conditionally render FloatingPics
+     
     )
   );
 }
 
 export default App;
+
+// import React from 'react';
+
+// export default function App() {
+//   alert("React rendered!");
+//   return (
+//     <div>
+//       <h1>Hello from React</h1>
+//     </div>
+//   );
+// }
+
+
+

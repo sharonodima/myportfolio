@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
@@ -65,7 +64,7 @@ img:hover {
   display: block;
 }
 
-/* Project Section */
+
 .projects-container {
   display: flex;
   justify-content: center;
@@ -143,7 +142,7 @@ a:hover {
   background-color: #4682b4;
 }
 
-/* Orbit Animation */
+
 @keyframes orbit {
   0% {
     transform: rotate(0deg) translateX(150px);
@@ -153,7 +152,7 @@ a:hover {
   }
 }
 
-.orbit-image:nth-child(1) {
+/* .orbit-image:nth-child(1) {
   animation-delay: 0s;
 }
 
@@ -171,7 +170,7 @@ a:hover {
 
 .orbit-image:nth-child(5) {
   animation-delay: 8s;
-}
+} */
 
 .nasa-container {
   display: flex;
@@ -245,7 +244,6 @@ h1, h2, h3 {
   100% { background-position: 0% 50%; }
 }
 
-/* Blinking Caret Animation */
 @keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -255,7 +253,7 @@ h1, h2, h3 {
   }
 }
 
-/* Navbar */
+
 .navbar {
   position: absolute;
   top: 20px;
@@ -278,7 +276,7 @@ h1, h2, h3 {
 }
 
 .navbar-menu a {
-  color: gold; /* Set the navbar text color to gold */
+  color: gold; 
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s ease-in-out;
@@ -289,7 +287,7 @@ h1, h2, h3 {
   padding: 30px 20px;
 }
 
-/* Global Header */
+
 .global-header {
   display: flex;
   flex-direction: column;
@@ -300,7 +298,8 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
-/* About Page */
+
+
 .about {
   text-align: center;
   padding: 20px;
@@ -313,7 +312,7 @@ h1, h2, h3 {
   padding: 20px;
 }
 
-/* Contact Page */
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -360,7 +359,7 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Social Media Icons */
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -377,7 +376,7 @@ h1, h2, h3 {
   transform: scale(1.2);
 }
 
-/* Contact Form */
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -417,30 +416,28 @@ h1, h2, h3 {
   background-color: #4682b4;
 }
 
-/* Floating Pictures Section */
-/* The container spans the full viewport and allows the pics to drift */
-/* Floating Pictures Container */
-.floating-pics-container {
+
+/* .floating-pics-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Allow interactions with underlying content */
-  z-index: 50; /* Adjust as needed */
+  pointer-events: none; 
+  z-index: 50; 
 }
 
-/* Each floating pic is absolutely positioned and animated */
+
 .floating-pic {
   position: absolute;
-  width: 120px;  /* Adjust the size as needed */
+  width: 120px;  
   height: auto;
   cursor: pointer;
-  pointer-events: auto; /* Enable hover interactions */
+  pointer-events: auto;
   animation: lazyDrift 30s ease-in-out infinite;
 }
 
-/* Distribute initial positions using nth-child selectors */
+
 .floating-pic:nth-child(1) {
   top: 10%;
   left: 10%;
@@ -460,29 +457,29 @@ h1, h2, h3 {
 .floating-pic:nth-child(5) {
   top: 80%;
   left: 20%;
-}
+} */
 
-/* Lazy drifting: the images only shift within a bounded area */
-@keyframes lazyDrift {
+
+/* @keyframes lazyDrift {
   0%   { transform: translate(0, 0); }
   25%  { transform: translate(5vw, 5vh); }
   50%  { transform: translate(-5vw, 5vh); }
   75%  { transform: translate(-5vw, -5vh); }
   100% { transform: translate(0, 0); }
-}
+} */
 
-/* On hover, the image accelerates to a new nearby position */
-.floating-pic:hover {
+
+/* .floating-pic:hover {
   animation: fastRun 1s ease-out forwards;
-}
+} */
 
 @keyframes fastRun {
   from { transform: none; }
   to   { transform: translate(10vw, -10vh); }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .floating-pics-container {
     display: none;
   }
-}
+} */
