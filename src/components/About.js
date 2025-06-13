@@ -19,14 +19,14 @@ function About() {
           <p>
             I was born and raised in Kenya, Africa and I have been in the states since January 2010. During this time, I have been a jack of all trades, as you can see on my 
             <a 
-              href="assets/Sharon Odima Engineering Resume 2025.pdf" 
+              href="/SharonOdimaEngineeringResume2025.pdf" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="resume-link"
             >
               resume
-            </a>, 
-            dabbling in the travel industry as a flight attendant in customer service and in home health care both as a certified nurse and a home aide. I attended Durham Technical Community College here in Durham, NC where I earned my associates degree in science. My favorite classes were anything to do with math or statistics.
+            </a> 
+            ,dabbling in the travel industry as a flight attendant in customer service and in home health care both as a certified nurse and a home aide. I attended Durham Technical Community College here in Durham, NC where I earned my associates degree in science. My favorite classes were anything to do with math or statistics.
           </p>
         </div>
 
