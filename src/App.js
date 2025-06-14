@@ -7,18 +7,28 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 
 function App() {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null); // ✪ This is the ref
+
+const scrollTo = (ref) => {
+  ref.current?.scrollIntoView({ behavior: 'smooth' });
+};
 
   return (
     <>
       <Header />
-      <Navbar scrollToContact={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })} />
-      <Welcome />
-      <About />
-      <Projects />
-      <div ref={contactRef}>
-        <Contact />
-      </div>
+      <Navbar
+        scrollToHome={() => scrollTo(homeRef)}
+        scrollToAbout={() => scrollTo(aboutRef)}
+        scrollToProjects={() => scrollTo(projectsRef)}
+        scrollToContact={() => scrollTo(contactRef)}
+      />
+      <div ref={homeRef}><Welcome /></div>
+      <div ref={aboutRef}><About /></div>
+      <div ref={projectsRef}><Projects /></div>
+      <div ref={contactRef}><Contact /></div>
     </>
   );
 }

@@ -1,24 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Theme.css'; // Assuming your styles live here
+import './Theme.css';
 
-function Navbar({ scrollToContact }) {
+function Navbar({ scrollToHome, scrollToAbout, scrollToProjects, scrollToContact }) {
   return (
     <nav className="navbar">
-      <ul className="navbar-menu"> {/* Use your real class */}
-        <li><Link to="/" className="gradient-text">Home</Link></li>
-        <li><Link to="/about" className="gradient-text">About</Link></li>
-        <li><Link to="/projects" className="gradient-text">Projects</Link></li>
+      <ul className="navbar-menu">
         <li>
-          <button onClick={scrollToContact} className="gradient-text nav-button">
-            Contact
-          </button>
+          <button className="nav-button gradient-text" onClick={scrollToHome}>Home</button>
+        </li>
+        <li>
+          <button className="nav-button gradient-text" onClick={scrollToAbout}>About</button>
+        </li>
+        <li>
+          <button className="nav-button gradient-text" onClick={scrollToProjects}>Projects</button>
+        </li>
+        <li>
+          <button className="nav-button gradient-text" onClick={scrollToContact}>Contact</button>
         </li>
       </ul>
     </nav>
   );
 }
+
 export default Navbar;
-
-
-
