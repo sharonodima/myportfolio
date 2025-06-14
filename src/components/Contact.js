@@ -27,19 +27,23 @@ function Contact() {
   };
 
   // 🔜 Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatusMessage('Sending...');
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatusMessage('Sending...');
 
-    try {
-      await axios.post('https://portfolio-backend-vc9x.onrender.com/api/contact', formData);
-      setStatusMessage('Thanks for your message. I will be in touch as soon as possible.');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setStatusMessage('Oops! Something went wrong.');
-    }
-  };
+  try {
+    await axios.post('https://portfolio-backend-vc9x.onrender.com/api/contact', formData);
+    setStatusMessage('Thanks for your message. I will be in touch as soon as possible.');
+    setFormData({ name: '', email: '', message: '' });
+
+    // ✅ Scroll to top after successful submission
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  } catch (error) {
+    console.error('Error sending message:', error);
+    setStatusMessage('Oops! Something went wrong.');
+  }
+};
 
 useEffect(() => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
