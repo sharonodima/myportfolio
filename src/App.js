@@ -10,20 +10,20 @@ function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
-  const contactRef = useRef(null); // ✪ This is the ref
+  const contactRef = useRef(null);
 
-const scrollTo = (ref) => {
-  ref.current?.scrollIntoView({ behavior: 'smooth' });
-};
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
       <Header />
       <Navbar
-        scrollToHome={() => scrollTo(homeRef)}
-        scrollToAbout={() => scrollTo(aboutRef)}
-        scrollToProjects={() => scrollTo(projectsRef)}
-        scrollToContact={() => scrollTo(contactRef)}
+        scrollToHome={() => scrollToSection(homeRef)}
+        scrollToAbout={() => scrollToSection(aboutRef)}
+        scrollToProjects={() => scrollToSection(projectsRef)}
+        scrollToContact={() => scrollToSection(contactRef)}
       />
       <div ref={homeRef}><Welcome /></div>
       <div ref={aboutRef}><About /></div>

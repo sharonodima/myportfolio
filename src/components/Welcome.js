@@ -42,8 +42,7 @@ function Welcome() {
   return (
     <div>
       <div className="section dark">
-        <p className="welcome-subheading">Before exploring my page,</p>
-        <p className="welcome-subheading"> explore the beauty of space with NASA's Photo of the Day</p>
+        <p className="welcome-subheading">Before exploring my page, explore the beauty of space with NASA's Photo of the Day</p>
       </div>
       <div className="section gray">
         <div className="nasa-container">

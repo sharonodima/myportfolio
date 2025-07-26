@@ -47,7 +47,7 @@ body::before {
 .center-image {
   border-radius: 80px;
   transition: all 1s;
-  max-width: 500px;
+  max-width: 300px;
   height: auto;
   margin: 10px auto;
   display: block;
@@ -63,7 +63,6 @@ img:hover {
   margin: 10px auto;
   display: block;
 }
-
 
 .projects-container {
   display: flex;
@@ -234,8 +233,13 @@ h1, h2, h3 {
   white-space: pre;
   overflow: hidden;
   width: fit-content;
-  margin: 200px auto 100px;
+  margin: 80px auto 30px;
   animation: blink-caret 0.6s step-end infinite;
+  text-shadow:
+    0 0 5px gold,
+    0 0 10px gold,
+    0 0 20px orange,
+    0 0 40px orange;
 }
 
 @keyframes gradient-move {
@@ -266,6 +270,10 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   transition: color 0.3s ease-in-out;
+  text-shadow:
+    0 0 10px rgba(255, 215, 0, 0.7),
+    0 0 20px rgba(255, 215, 0, 0.5);
+  animation: scale-in 2s ease-out;
 }
 
 
@@ -287,7 +295,6 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   gap: 30px;
-  animation: scale-in 2s ease-out;
 }
 
 .navbar-menu a {
@@ -313,8 +320,6 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
-
-
 .about {
   text-align: center;
   padding: 20px;
@@ -326,7 +331,6 @@ h1, h2, h3 {
   gap: 20px;
   padding: 20px;
 }
-
 
 .contact-container {
   display: flex;
@@ -374,7 +378,6 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-
 .social-links {
   display: flex;
   justify-content: center;
@@ -390,7 +393,6 @@ h1, h2, h3 {
 .social-icon:hover {
   transform: scale(1.2);
 }
-
 
 .contact-form {
   display: flex;
