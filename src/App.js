@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import Blog from "./components/Blog";
+import { useRef } from 'react';
 import Welcome from './components/Welcome';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -10,6 +11,7 @@ function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const blogsRef = useRef(null);
   const contactRef = useRef(null);
 
   const scrollToSection = (ref) => {
@@ -23,11 +25,13 @@ function App() {
         scrollToHome={() => scrollToSection(homeRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}
         scrollToProjects={() => scrollToSection(projectsRef)}
+        scrollToBlogs={() => scrollToSection(blogsRef)}
         scrollToContact={() => scrollToSection(contactRef)}
       />
       <div ref={homeRef}><Welcome /></div>
       <div ref={aboutRef}><About /></div>
       <div ref={projectsRef}><Projects /></div>
+      <div ref={blogsRef}><Blog /></div>
       <div ref={contactRef}><Contact /></div>
     </>
   );
