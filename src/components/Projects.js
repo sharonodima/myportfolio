@@ -10,13 +10,13 @@ function Projects() {
       <header className="header-container">
         <div className="header"></div>
       </header>
-      <h2 className="projects-title gradient-text">MY PROJECTS</h2>
+      <h1 className="projects-title gradient-text">MY PROJECTS</h1>
       <div className="projects-container">
 
         {/* Project 1 */}
         <div className="project-box">
-          <h3 className="gradient-text">Project 1</h3>
-          <h3 className="gradient-text">Responsive Design</h3>
+          <h2 className="gradient-text">Project 1</h2>
+          <h3 className="gradient-text">Store Front</h3>
           <a
             href="https://sharonodima.github.io/HTML-CSS-Responsive-Practice/"
             target="_blank"
@@ -39,6 +39,26 @@ function Projects() {
           </p>
         </div>
 
+                {/* Project 1 */}
+        <div className="project-box">
+          <h3 className="gradient-text">Project 1</h3>
+          <h3 className="gradient-text">Responsive Design</h3>
+          <a
+            href="https://sharonodima.github.io/HTML-CSS-Responsive-Practice/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           <img
+              src={project2}
+              alt="Project 1 Photo"
+              className="project-photo reduced-size"
+           />
+
+          </a>
+          <p>
+            I built a responsive Instagram-style social media application using Next.js, leveraging Server-Side Rendering (SSR) and Static Site Generation (SSG) for better performance and SEO. I designed reusable React components and a clean interface with TypeScript and Tailwind CSS. I then implemented secure authentication with JSON Web Tokens (JWT) and password hashing using bcrypt.js, storing user and post data in MongoDB with custom backend routes for registration, login, and post management. Finally, I deployed the app to Vercel with a CI/CD pipeline and used Faker.js to generate mock data for development, maintaining version control with Git and GitHub.
+          </p>
+        </div>
 
         {/* Project 2 */}
         <div className="project-box">
