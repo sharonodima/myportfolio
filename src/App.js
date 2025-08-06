@@ -20,7 +20,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <Navbar
         scrollToHome={() => scrollToSection(homeRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}
@@ -28,6 +27,7 @@ function App() {
         scrollToBlogs={() => scrollToSection(blogsRef)}
         scrollToContact={() => scrollToSection(contactRef)}
       />
+      <Header />
       <div ref={homeRef}><Welcome /></div>
       <div ref={aboutRef}><About /></div>
       <div ref={projectsRef}><Projects /></div>

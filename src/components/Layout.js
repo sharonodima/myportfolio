@@ -2,7 +2,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom'; // Ensure you're using react-router-dom for routing
 import FloatingPics from './FloatingPics';
-import './Theme.css';
 
 function Layout() {
   return React.createElement(

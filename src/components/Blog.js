@@ -12,12 +12,20 @@ export default function Blog() {
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: 20 }}>
-      <h1 style={{ textAlign: "center", marginBottom: "30px" }}>My Blog</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "30px", fontSize: "40px", fontWeight: "bold",
+            fontFamily: "cursive",
+            textShadow: `
+              0 0 5px #facc15,
+              0 0 10px #facc15,
+              0 0 20px rgb(255, 25, 0),
+              0 0 40px orange
+            `
+         }}>My Blog</h1>
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "20px",
         }}
       >
@@ -25,20 +33,39 @@ export default function Blog() {
           <div
             key={post.id}
             style={{
-              //border: "1px solid #ccc",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
               borderRadius: "8px",
               padding: "15px",
-              background:"rgba(45, 45, 45, 0.9)",
+              background: "rgba(45, 45, 45, 0.9)",
+              height: "100%",
             }}
           >
-            <h1
-              style={{ textAlign: "center", fontSize: "20px" }} 
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }} 
-            />
-            <p
-              style={{ fontSize: "16px", fontWeight: "normal" }}
-              dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-            />
+            <div>
+              <h1
+                style={{ textAlign: "center", fontSize: "20px" }}
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
+              <p
+                style={{ fontSize: "16px", fontWeight: "normal", marginTop: "10px" }}
+                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+              />
+            </div>
+
+            <a
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 underline"
+              style={{
+                marginTop: "20px",
+                alignSelf: "center",
+                textAlign: "center",
+              }}
+            >
+              Read More →
+            </a>
           </div>
         ))}
       </div>

@@ -5,7 +5,6 @@ import css from '../css.png';
 import javascript from '../Javascript.png';
 import node from '../Node.png';
 import reactPic from '../ReactPic.png';
-import './Theme.css'; // Ensure your CSS file (with floating pics styles) is imported
 
 function FloatingPics() {
   return React.createElement(
