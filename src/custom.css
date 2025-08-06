@@ -212,7 +212,7 @@ h1, h2, h3 {
 }
 
 @media (max-width: 480px) {
-  .portrait-photo { width: 120px; height: 120px; }
+  .portrait-photo { width: 120px; height: 220px; }
 }
 
 @keyframes glowing-text {
