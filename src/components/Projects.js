@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
+import project1 from "../Project1.jpeg";
 import project2 from "../Project2.jpeg";
 import project3 from "../Project3.jpeg";
 import "../custom.css";
@@ -9,7 +10,7 @@ function Projects() {
     {
       title: "Project 1",
       subtitle: "Store Front",
-      img: project2,
+      img: project1,
       link: "https://sharonodima.github.io/HTML-CSS-Responsive-Practice/",
       desc: "Created a Single Page Application with HTML, CSS, and JavaScript to showcase responsive design elements and executed responsive layouts by leveraging media queries to facilitate mobile viewing. I enhanced accessibility in accordance with WCAG standards by using scalable font units and ensuring content was available to assistive technologies like screen readers.",
     },
@@ -35,9 +36,9 @@ function Projects() {
         <div className="header"></div>
       </header>
 
-      <h1 className="projects-title gradient-text" 
+      <h1 className="projects-title gradient-text glow" 
           style={{
-            fontFamily: "cursive",
+            fontFamily: "Poppins",
             textShadow: `
               0 0 5px #facc15,
               0 0 10px #facc15,
@@ -53,7 +54,7 @@ function Projects() {
           {projects.map((p, i) => (
             <div
               key={i}
-              className="bg-[rgba(45,45,45,0.9)] rounded-lg shadow-lg p-5 text-center hover:scale-105 transition-transform flex flex-col items-center w-[450px]"
+              className="bg-[rgba(45,45,45,0.9)] rounded-lg shadow-lg p-5 text-center hover:scale-105 transition-transform flex flex-col items-center w-[390px]"
             >
               <h2 className="gradient-text text-lg mb-1">{p.title}</h2>
               <h3 className="gradient-text text-base mb-3">{p.subtitle}</h3>

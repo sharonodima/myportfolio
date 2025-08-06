@@ -39,7 +39,7 @@ function About() {
     <div className="page-container about">
       <h1 className="projects-title gradient-text"
        style={{
-            fontFamily: "cursive",
+            fontFamily: "Poppins",
             textShadow: `
               0 0 5px #facc15,
               0 0 10px #facc15,

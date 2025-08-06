@@ -47,7 +47,7 @@ function Welcome() {
        <h2
           className="text-4xl text-yellow-400 text-center mb-8 glow"
           style={{
-            fontFamily: "cursive",
+            fontFamily: "Poppins",
             textShadow: `
               0 0 5px #facc15,
               0 0 10px #facc15,

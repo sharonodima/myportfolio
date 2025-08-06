@@ -18,7 +18,7 @@ function Header() {
     <header className="global-header">
       <h1 className="typewriter glow" 
           style={{
-              fontFamily: "cursive",
+              fontFamily: "Poppins",
               textShadow: `
                 0 0 5px #facc15,
                 0 0 10px #facc15,

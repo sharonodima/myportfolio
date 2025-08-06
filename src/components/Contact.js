@@ -42,9 +42,9 @@ function Contact() {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <h2
-      className="font-bold text-yellow-400 text-center mb-8 drop-shadow-md"
+      className="font-bold text-yellow-400 text-center mb-8 drop-shadow-md glow"
       style={{ fontSize: "40px",
-            fontFamily: "cursive",
+            fontFamily: "Poppins",
             textShadow: `
               0 0 5px #facc15,
               0 0 10px #facc15,

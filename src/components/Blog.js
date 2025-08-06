@@ -12,8 +12,8 @@ export default function Blog() {
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: 20 }}>
-      <h1 style={{ textAlign: "center", marginBottom: "30px", fontSize: "40px", fontWeight: "bold",
-            fontFamily: "cursive",
+      <h1 className = "glow" style={{ textAlign: "center", marginBottom: "30px", fontSize: "40px", fontWeight: "bold",
+            fontFamily: "Poppins",
             textShadow: `
               0 0 5px #facc15,
               0 0 10px #facc15,
