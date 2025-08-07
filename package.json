@@ -16,8 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "curl -X POST \"https://api.vercel.com/v1/integrations/deploy/prj_puKEcuLIPRnbqDoghoQgUY8tR9Gs/qHVbCU1EuJ\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +39,6 @@
   "devDependencies": {
     "tailwindcss": "^3.4.13",
     "postcss": "^8.4.35",
-    "autoprefixer": "^10.4.18",
-    "gh-pages": "^6.3.0"
+    "autoprefixer": "^10.4.18"
   }
 }

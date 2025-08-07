@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   const homeRef = useRef(null);
@@ -33,6 +34,7 @@ function App() {
       <div ref={projectsRef}><Projects /></div>
       <div ref={blogsRef}><Blog /></div>
       <div ref={contactRef}><Contact /></div>
+      <ScrollToTopButton />
     </>
   );
 }
