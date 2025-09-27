@@ -1,11 +1,10 @@
-import Blog from "./components/Blog";
+import ModernBlog from "./components/ModernBlog";
 import { useRef } from 'react';
-import Welcome from './components/Welcome';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
+import ModernHero from './components/ModernHero';
+import ModernAbout from './components/ModernAbout';
+import ModernProjects from './components/ModernProjects';
+import ModernContact from './components/ModernContact';
+import ModernNavbar from './components/ModernNavbar';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
@@ -21,19 +20,18 @@ function App() {
 
   return (
     <>
-      <Navbar
+      <ModernNavbar
         scrollToHome={() => scrollToSection(homeRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}
         scrollToProjects={() => scrollToSection(projectsRef)}
         scrollToBlogs={() => scrollToSection(blogsRef)}
         scrollToContact={() => scrollToSection(contactRef)}
       />
-      <Header />
-      <div ref={homeRef}><Welcome /></div>
-      <div ref={aboutRef}><About /></div>
-      <div ref={projectsRef}><Projects /></div>
-      <div ref={blogsRef}><Blog /></div>
-      <div ref={contactRef}><Contact /></div>
+      <div ref={homeRef} data-section="home"><ModernHero scrollToProjects={() => scrollToSection(projectsRef)} scrollToContact={() => scrollToSection(contactRef)} /></div>
+      <div ref={aboutRef} data-section="about"><ModernAbout scrollToProjects={() => scrollToSection(projectsRef)} scrollToContact={() => scrollToSection(contactRef)} /></div>
+      <div ref={projectsRef} data-section="projects"><ModernProjects scrollToContact={() => scrollToSection(contactRef)} /></div>
+      <div ref={blogsRef} data-section="blogs"><ModernBlog /></div>
+      <div ref={contactRef} data-section="contact"><ModernContact /></div>
       <ScrollToTopButton />
     </>
   );
