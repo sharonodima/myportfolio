@@ -50,7 +50,7 @@ const ModernContact = () => {
     setStatusMessage('');
 
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://backend-10vkgtsgp-odimasharon.vercel.app/api/contact', formData);
       setStatusMessage('Thanks for your message. I will be in touch as soon as possible.');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
