@@ -6,11 +6,13 @@ function Header() {
   const fullText = "MY NAME IS SHARON ODIMA\nAND I'M A SOFTWARE ENGINEER";
 
   useEffect(() => {
-    const typingInterval = setInterval(() => {
-      setTypedIndex((prev) => prev + 1);
-    }, 100); // Typing speed
-    return () => clearInterval(typingInterval);
-  }, []);
+    if (typedIndex < fullText.length) {
+      const typingInterval = setTimeout(() => {
+        setTypedIndex((prev) => prev + 1);
+      }, 100); // Typing speed
+      return () => clearTimeout(typingInterval);
+    }
+  }, [typedIndex, fullText.length]);
 
   const typedText = fullText.slice(0, typedIndex);
 

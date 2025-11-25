@@ -280,7 +280,7 @@ const ModernContact = () => {
                   ) : (
                     <>
                       <span>Send Message</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
                     </>
@@ -289,16 +289,26 @@ const ModernContact = () => {
               </form>
 
               {statusMessage && (
-                <div className={`mt-6 p-4 rounded-lg ${statusMessage.includes('Thanks') ? 'bg-green-500/20 border border-green-500/30 text-green-300' : 'bg-red-500/20 border border-red-500/30 text-red-300'}`}>
+                <div
+                  role={statusMessage.includes('Thanks') ? 'status' : 'alert'}
+                  aria-live="polite"
+                  className={`mt-6 p-4 rounded-lg ${statusMessage.includes('Thanks') ? 'bg-green-500/20 border-2 border-green-500 text-green-300' : 'bg-red-500/20 border-2 border-red-500 text-red-300'}`}
+                >
                   <div className="flex items-center space-x-2">
                     {statusMessage.includes('Thanks') ? (
-                      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      <>
+                        <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="sr-only">Success:</span>
+                      </>
                     ) : (
-                      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      <>
+                        <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="sr-only">Error:</span>
+                      </>
                     )}
                     <p className="font-medium">{statusMessage}</p>
                   </div>
@@ -313,13 +323,13 @@ const ModernContact = () => {
       <footer className="py-12 border-t border-gray-800">
         <div className="container-modern">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
+            <p className="text-5xl md:text-6xl font-bold text-gradient mb-4">
               Sharon Odima
-            </h1>
+            </p>
             <p className="text-2xl md:text-3xl font-light text-white mb-8">
               Full-Stack Developer
             </p>
-            <p className="text-gray-400 max-w-3xl mx-auto">
+            <p className="text-gray-100 max-w-3xl mx-auto">
               Bringing ideas to life through code, one project at a time. Let's build something extraordinary together.
             </p>
           </div>
